@@ -9,7 +9,7 @@ $selection=Read-Host "Choose a Domain A. Heritage Color B. Sandream C. HQ D. Cal
 Switch ($selection)
 {
 A {$Chosendomain="heritagecolor.com"}
-B {$Chosendomain="sandreamspecialities.com"}
+B {$Chosendomain="sandreamspecialties.com"}
 C {$Chosendomain="vivifycompany.com"}
 D {$Chosendomain="calico.ca"}
 }
