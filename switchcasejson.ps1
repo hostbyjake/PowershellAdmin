@@ -6,6 +6,7 @@ $subscription = '7be458ed-9d5e-4b79-bedb-b61e8510e45b'
 $regionName = "centralus"
 $resourceGroup = 'LogicFlow'
 $nameOfFlow = 'MyFlow'
+$pathToCSV = 'C:\Users\jjones\Scripts\LogicAppVivify.csv'
 
 function Check-Command($cmdname) {
     return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
@@ -26,21 +27,33 @@ else {
 # $subscriptionName = $output.name
 # $subscriptionList | Format-Table name, id, tenantId, user -AutoSize
 # $accountID = $output.id
-
-
+$csvFile = Get-Content '.\LogicApp.json' | ConvertFrom-Json | ConvertTo-Csv
+Write-Output $csvFile > .\newcsv.csv
+$pathToCSV = '.\newcsv.csv'
+$csv = Import-Csv -path $pathToCSV
+$people = new-object System.Collections.ArrayList
+$location = new-object System.Collections.ArrayList
+foreach ($person in $csv.FROM) {
+     $people.add($person) | out-null
+}
+foreach ($person in $csv.FOLDER) {
+    $location.add($person) | out-null
+}
+$emailsToParse = $people -split ","
+$locationToSend = $location -split ","
 
 #Install-module PSExcel -Force
-Import-module psexcel 
-$people = new-object System.Collections.ArrayList
+#Import-module psexcel 
+#$people = new-object System.Collections.ArrayList
 
-foreach ($person in (Import-XLSX -Path $pathToExcel -RowStart 1)) {
-    $people.add($person) | out-null 
-
-
+#foreach ($person in (Import-XLSX -Path $pathToExcel -RowStart 1)) {
+#    $people.add($person) | out-null 
 
 
-$emailsToParse = $people.FROM | Select-Object -unique
-$locationToSend = $people.FOLDER | Select-Object -unique
+
+
+#$emailsToParse = $people.FROM | Select-Object -unique
+#$locationToSend = $people.FOLDER | Select-Object -unique
 
 for ($i = 1; $i -lt $emailsToParse.Count; $i++) {
     $forEachNumber = $i 
@@ -252,7 +265,6 @@ $lastCase = @"
     "case": "$lastCaseEmailToParse"
 }
 "@
-}
 
 $schema = "$" + "schema"
 $connections = "$" + "connections"
@@ -384,4 +396,4 @@ $workflowJson = @"
 
 Write-Output $workflowJson > .\workflowSwitch.json
 
-az logic workflow create --resource-group $resourceGroup --location $regionName --name $nameOfFlow --definition .\workflowSwitch.json
+## az logic workflow create --resource-group $resourceGroup --location $regionName --name $nameOfFlow --definition .\workflowSwitch.json
