@@ -20,7 +20,7 @@ Power Shell for a Sys Admin
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
 
-Powershell
+Powershell,
 365 Admin Account
 
 
