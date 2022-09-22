@@ -13,39 +13,14 @@ Power Shell for a Sys Admin
 <!-- Env Variables -->
 ### :key: 
 
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
 
 <!-- Getting Started -->
-## 	:toolbox: Getting Started
+## 	:toolbox: Some of these need Admin Rights, but scripts like Outlook Limit only work non admin logged in as the user!
 
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
 
-This project uses Yarn as package manager
+Powershell
+365 Admin Account
 
-```bash
- npm install --global yarn
-```
 
-<!-- Installation -->
-### :gear: Installation
-
-Install my-project with npm
-
-```bash
-  yarn install my-project
-  cd my-project
-```
-   
-<!-- Running Tests -->
-### :test_tube: Running Tests
-
-To run tests, run the following command
-
-```bash
-  yarn test test
-```
