@@ -7,4 +7,3 @@ Invoke-WebRequest -Uri https://assets.nextiva.com/download/Nextiva-win.exe -OutF
 
 
 ######ADOBE
-Invoke-WebRequest -Uri 'https://bsgtech.sharepoint.com/:u:/s/Engineering/EUnsM0yHgvNNgm4QKZl0jIgBnLIjGHrD9NvKhswSxa5z3A?e=dAShKt' 
