@@ -15,7 +15,7 @@ Power Shell for a Sys Admin
 
 
 <!-- Getting Started -->
-## 	:toolbox: Some of these need Admin Rights, but scripts like Outlook Limit only work non admin logged in as the user!
+## 	:toolbox: Some of these need Admin Rights, but scripts like Outlook Limit only work non admin, logged in as the user!
 
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
