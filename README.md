@@ -11,7 +11,7 @@ Power Shell for a Sys Admin
 
 
 <!-- Env Variables -->
-### :key: Environment Variables
+### :key: 
 
 To run this project, you will need to add the following environment variables to your .env file
 
