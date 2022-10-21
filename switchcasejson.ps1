@@ -83,7 +83,7 @@ for ($i = 1; $i -lt $emailsToParse.Count; $i++) {
                                             }
                                         },
                                         "method": "post",
-                                        "path": "/datasets/@{encodeURIComponent(encodeURIComponent('$sharePointSite'))}/tables/@{encodeURIComponent(encodeURIComponent('$subscription'))}/createnewfolder"
+                                        "path": "/datasets/@{encodeURIComponent(encodeURIComponent('$sharePointSite'))}/tables/@{encodeURIComponent(encodeURIComponent('Reporting'))}/createnewfolder"
                                     },
                                     "runAfter": {},
                                     "type": "ApiConnection"
@@ -188,7 +188,7 @@ $lastCase = @"
                                         }
                                     },
                                     "method": "post",
-                                    "path": "/datasets/@{encodeURIComponent(encodeURIComponent('$sharePointSite'))}/tables/@{encodeURIComponent(encodeURIComponent('$subscription'))}/createnewfolder"
+                                    "path": "/datasets/@{encodeURIComponent(encodeURIComponent('$sharePointSite'))}/tables/@{encodeURIComponent(encodeURIComponent('Reporting'))}/createnewfolder"
                                 },
                                 "runAfter": {},
                                 "type": "ApiConnection"

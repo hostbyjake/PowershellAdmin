@@ -5,7 +5,7 @@ Connect-MgGraph -Scopes $RequiredScopes
 
 function Get-Domain
 {
-$selection=Read-Host "Choose a Domain A. Heritage Color B. Sandream C. HQ D. Calico "
+$selection=Read-Host "Choose a Domain A. Heritage Color B. Sandream C. Vivify-HQ D. Calico "
 Switch ($selection)
 {
 A {$Chosendomain="heritagecolor.com"}
