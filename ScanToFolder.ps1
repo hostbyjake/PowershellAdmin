@@ -1,4 +1,4 @@
-net user scan scantofolder2! /expires:never /add
+net user scan scanpassword /expires:never /add
 #Makes the Scan User - Assigns default password - Change above if desired.
 $computername = hostname
 $User =((Get-WMIObject -ClassName Win32_ComputerSystem).Username).Split('\')[1]
