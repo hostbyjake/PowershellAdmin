@@ -1,6 +1,6 @@
-$username = "adminTest"   # Administrator is built-in name
-$password = ConvertTo-SecureString "LazyAdminPwd123!" -AsPlainText -Force  # Super strong plane text password here (yes this isn't secure at all)
-$logFile = "\\server\folder\log.txt"
+$username = "bsglocaladmin"   # Administrator is built-in name
+$password = ConvertTo-SecureString "rp3nrxuapu73!" -AsPlainText -Force 
+$logFile = "C:/log.txt"
 
 Function Write-Log {
   param(
@@ -37,3 +37,5 @@ Write-Log -message "$env:COMPUTERNAME - Create local admin account"
 Create-LocalAdmin
 
 Write-Log -message "#########"
+
+Get-NetNeighbor

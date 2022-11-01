@@ -11,11 +11,11 @@ $UsbDesktop = "$UsbUserDir/Desktop"
 $UsbPictures = "$UsbUserDir/Pictures"
 $UsbDownloads = "$UsbUserDir/Downloads"
 Set-Location $UserDir
-If ( (Test-Path 'Documents') ) { robocopy 'Documents' $UsbDocuments /mt /e /z } else { Write-Host 'Document Folder Not Found' -Fore DarkRed };
+If ( (Test-Path 'Documents') ) { robocopy 'Documents' $UsbDocuments /mt /e /b /z } else { Write-Host 'Document Folder Not Found' -Fore DarkRed };
 If ( (Test-Path 'Documents') ) { Write-Host 'Done Transfering Documents!' -Fore Green } else { Write-Host 'Could not Transfer Documents' -Fore DarkRed };
-If ( (Test-Path 'Desktop') ) { robocopy 'Desktop' $UsbDesktop /mt /e /z } else { Write-Host 'Desktop Folder Not Found' -Fore DarkRed };
+If ( (Test-Path 'Desktop') ) { robocopy 'Desktop' $UsbDesktop /mt /e /b /z } else { Write-Host 'Desktop Folder Not Found' -Fore DarkRed };
 If ( (Test-Path 'Desktop') ) { Write-Host 'Done Transfering Desktop!' -Fore Green } else { Write-Host 'Could not Transfer Desktop' -Fore DarkRed };
-If ( (Test-Path 'Pictures') ) { robocopy 'Pictures' $UsbPictures /mt /e /z } else { Write-Host 'Picture Folder Not Found' -Fore DarkRed };
+If ( (Test-Path 'Pictures') ) { robocopy 'Pictures' $UsbPictures /mt /e /b /z } else { Write-Host 'Picture Folder Not Found' -Fore DarkRed };
 If ( (Test-Path 'Pictures') ) { Write-Host 'Done Transfering Pictures!' -Fore Green } else { Write-Host 'Could not Transfer Pictures' -Fore DarkRed };
-If ( (Test-Path 'Downloads') ) { robocopy 'Downloads' $UsbDownloads /mt /e /z } else { Write-Host 'Download Folder Not Found' -Fore DarkRed };
+If ( (Test-Path 'Downloads') ) { robocopy 'Downloads' $UsbDownloads /mt /e /b /z } else { Write-Host 'Download Folder Not Found' -Fore DarkRed };
 If ( (Test-Path 'Downloads') ) { Write-Host 'Done Transfering Downloads!' -Fore Green } else { Write-Host 'Could not Transfer Downloads' -Fore DarkRed };

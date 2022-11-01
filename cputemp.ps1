@@ -11,8 +11,16 @@ function Get-Temperature {
 
     $currentTempFahrenheit = (9/5) * $currentTempCelsius + 32
 
-    $returntemp += $currentTempCelsius.ToString() + " C : " + $currentTempFahrenheit.ToString() + " F : " + $currentTempKelvin + "K"  
+    $currentTempCelsiusRounded = [math]::Round($currentTempCelsius)
+    
+    $currentTempFarenheightRounded = [math]::Round($currentTempFahrenheit)
+
+    $returntemp += $currentTempCelsiusRounded.ToString() + " C / " + $currentTempFarenheightRounded.ToString() + " F "
     }
     return $returntemp
 }
+
+Get-Temperature
+
+
 
