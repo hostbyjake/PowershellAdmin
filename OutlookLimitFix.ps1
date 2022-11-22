@@ -5,7 +5,6 @@ $Keys = Get-Item -Path HKLM:\Software\RegisteredApplications | Select-Object -Ex
 $Product = $Keys | Where-Object {$_ -Match "Excel.Application."}
 $OfficeVersion = ($Product.Replace("Excel.Application.","")+".0")
 Write-Host $OfficeVersion
-
 $registryPath =  -join(‘HKCU:\Software\Microsoft\Office\’, $OfficeVersion, ‘\Outlook\PST’)
 If ( !(Test-Path $registryPath) ) { New-Item -Path $registryPath -Force; };
 New-ItemProperty -Path $registryPath -Name “MaxFileSize” -Value 100000 -PropertyType DWORD -Force

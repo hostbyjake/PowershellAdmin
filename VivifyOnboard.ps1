@@ -2,7 +2,6 @@ $RequiredScopes = @("Directory.AccessAsUser.All", "Directory.ReadWrite.All", "Us
 Connect-MgGraph -Scopes $RequiredScopes
 #Calls Latest Supported Powershell Module for 365 Commands with the appropiate permissions.
 #Module used is replacing legacy Azure AD & MsolService
-
 function Get-Domain
 {
 $selection=Read-Host "Choose a Domain A. Heritage Color B. Sandream C. Vivify-HQ D. Calico "
@@ -20,10 +19,8 @@ else {
 return $Chosendomain
 }
 }
-
 $Domain = Get-Domain
 #Prompts a multiple-choice selection of the appropriate domain for the new user
-
 if($Domain -ne $null){
 $DisplayName = Read-Host -Prompt 'Enter First and Last Name for New Account'
 } else {
@@ -31,7 +28,6 @@ $DisplayName = Read-Host -Prompt 'Enter First and Last Name for New Account'
     $DisplayName = Read-Host -Prompt 'Enter First and Last Name for New Account'
 }
 #Prompts for User First and Last Name if no errors
-
 $NameSplit = $DisplayName -split " "
 $FirstName = $NameSplit[0]
 $LastName = $NameSplit[1]
@@ -43,7 +39,6 @@ $FirstLetter = $FirstSplit[1]
 $MailNickname = $FirstName
 $UserAccount = ($FirstName + '.' + $LastName + '@' + $Domain)
 #Pulls First and Last Name into seperate variables
-
 $params = @{
 	AccountEnabled = $true
 	DisplayName = $DisplayName
