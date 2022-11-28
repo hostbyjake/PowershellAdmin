@@ -1,5 +1,5 @@
 $username = "bsglocaladmin"   # Administrator is built-in name
-$password = ConvertTo-SecureString "rp3nrxuapu73!" -AsPlainText -Force 
+$password = ConvertTo-SecureString "password!" -AsPlainText -Force 
 $logFile = "C:/log.txt"
 
 Function Write-Log {
